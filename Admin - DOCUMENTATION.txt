@@ -1,0 +1,7 @@
+ADMIN DOCUMENTATION
+
+Scenario 1 - Admin would like to Change the maximum daily orders
+~ Admin begins in main menu and inputs password to reach admin menu. From here the admin can update the menu, view reports, and change maximum daily orders. The admin will select 3 to change maximum daily orders. The admin will then enter in the number of orders they will allow for the day. 
+
+Scenario 2 - Admin would like to edit the menu with a new donut entry
+~ Admin begins in main menu and inputs password to reach admin menu. From here the admin can update the menu, view reports, and change maximum daily orders. The admin will select 1 to edit the menu and then place the donut information into terminal (donutId, donutType, donutFlavor, price). This will then add the admin's donut to the menu and allow tray population with this id. 

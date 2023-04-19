@@ -1,0 +1,7 @@
+EMPLOYEE DOCUMENTATION
+
+Scenario 1: Employee would like to show valid orders
+~ The employee will first start at the main menu. They will place in their passcode in order to reach the employee menu. Once there, they will be able to view the menu, view orders, or view inventory. They would like to print the order, so they will select that option. This will then print the active orders and return the employee to the main menu. 
+
+Scenario 2: Employee would like to add a tray of glazed donuts
+~ The employee will first start at the  main menu. They will place in their passcode in order to reach the employee menu.  Once there, they will be able to view the menu, view orders, or view inventory. We will select view inventory, and then add tray. We will be prompted for a donut id type, then it will populate a tray with donuts and return the employee to the main menu. 

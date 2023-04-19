@@ -1,0 +1,8 @@
+CUSTOMER DOCUMENTATION
+
+
+Scenario 1 - Customer would like to place an order
+ ~ The customer will load the program and view the menu. They will then decide what flavor they want, and will select using numbered input. They will then be asked the quantity. Once input, the program will send an order in and the order will be submitted. The customer will then wait for their order to be fulfilled 
+
+Scenario 2 - Customer would like to place an order, though there are none in stock. 
+ ~ The customer will load the program and view the menu. They will then decide what flavor they want, and will select using numbered input. The program will check the inventory and deny the order request, as there are none in inventory. The customer will be booted back to the start screen. 
