@@ -1,7 +1,4 @@
 import java.util.Scanner;
-
-import javax.lang.model.util.ElementScanner6;
-
 import java.util.ArrayList;
 import java.io.File;
 import java.io.FileWriter;
