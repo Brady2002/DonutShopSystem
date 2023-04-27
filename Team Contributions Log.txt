@@ -1,0 +1,1 @@
+I wrote a lot of the menu infrastructure as well as the donut, tray, and ivnentory system. Noah Fry wrote the order system and tracking. Jason Kern wrote all of the logging code.

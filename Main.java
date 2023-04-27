@@ -1,4 +1,7 @@
 import java.util.Scanner;
+
+import javax.lang.model.util.ElementScanner6;
+
 import java.util.ArrayList;
 import java.io.File;
 import java.io.FileWriter;
@@ -44,7 +47,7 @@ public class Main{
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] parts = line.split(",");
-                Tray tray = new Tray(Integer.parseInt(parts[0]), Integer.parseInt(parts[1]), parts[2], parts[3], Integer.parseInt(parts[4]), Integer.parseInt(parts[5]), menu_donuts, Integer.parseInt(parts[5]));
+                Tray tray = new Tray(Integer.parseInt(parts[0]), Integer.parseInt(parts[1]), parts[2], parts[3], Integer.parseInt(parts[4]), Integer.parseInt(parts[5]), menu_donuts, Float.parseFloat(parts[6]));
                 inventory_donuts.add(tray);
             }
             scanner.close();
@@ -158,9 +161,16 @@ public class Main{
                                 break;
                             case 2:
                                 System.out.println("\nCurrent Inventory:");
-                                for (int i = 0; i < inventory_donuts.size(); i++) {
-                                    System.out.println("------------------------");
-                                    inventory_donuts.get(i).printInfo();
+                                if (inventory_donuts.size() == 0)
+                                {
+                                    System.out.println("\n\tNo Current Invetory");
+                                }
+                                else
+                                {
+                                    for (int i = 0; i < inventory_donuts.size(); i++) {
+                                        System.out.println("------------------------");
+                                        inventory_donuts.get(i).printInfo();
+                                    }
                                 }
                                 System.out.println("\nWhat operation would you like to perform?");
                                 System.out.println("\t1.) Add Tray\n\t2.) Back");
@@ -231,7 +241,7 @@ public class Main{
                     System.out.println("Enter the admin password to continue:");
                     String password2 = input.next();
                     if(password2.equals("2")) {
-                        System.out.println("\n--------Welcome, Admin!--------\nWhat operation would you like to perform?");
+                        System.out.println("\n--------Welcome, Admin!--------\n");
                         System.out.println("\t1.) Update the menu \n\t2.) View reports \n\t3.) Change Max Daily Orders \n\t4.) Back \n\t5.) Exit Program and End Day");
                         int choice5 = input.nextInt();
                         switch(choice5) {
@@ -392,7 +402,7 @@ public class Main{
                 }
                 if (inventory_donuts.size() != 0)
                 {
-                    save.write(inventory_donuts.get(i).getTrayId() + "," + inventory_donuts.get(i).getDonutId() + "," + inventory_donuts.get(i).getDonutType() + "," + inventory_donuts.get(i).getDonutFlavor() + "," + inventory_donuts.get(i).getNumDonuts() + "," + (inventory_donuts.get(i).getAge()) + "\n");
+                    save.write(inventory_donuts.get(i).getTrayId() + "," + inventory_donuts.get(i).getDonutId() + "," + inventory_donuts.get(i).getDonutType() + "," + inventory_donuts.get(i).getDonutFlavor() + "," + inventory_donuts.get(i).getNumDonuts() + "," + (inventory_donuts.get(i).getAge()) + "," + (inventory_donuts.get(i).getPrice()) + "\n");
                 }
             }
             save.close();
